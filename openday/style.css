@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: poppins;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+:root{
+    --main-color:#cab273;
+    --main-light-color:#fffbf0;
+    --secondary-color:#551756;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.header-top-bar{
+    border-bottom: 1px solid #f5f5ff;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-top-bar span{
+    color: #474747;
+    font-size: 0.8rem;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+}
