@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-light py-3">
+        <div class="container text-center">
+            <img src="img/logo.png" alt="Beauty Logo" class="logo" style="max-width: 100%; height: auto;">
+
+            <h1>Contact Us</h1>
+            <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark mx-2" onclick="window.location.href='webpage.html'">Home</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark mx-2" onclick="window.location.href='about.html'">About Us</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark mx-2" onclick="window.location.href='gallery.html'">Gallery</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark mx-2" onclick="window.location.href='contact.html'">Contact</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container py-5">
+        <div class="text-center">
+            <h2>Contact Information</h2>
+            <p>Email: example@email.com</p>
+            <p>Phone: +123 456 7890</p>
+        </div>
+
+        <div class="text-center my-5">
+            <h2>Watch Our Live Stream</h2>
+            <div id="fb-live" class="d-flex justify-content-center">
+                <div class="fb-video" 
+                     data-href="https://www.facebook.com/profile.php?id=100084743862097&rdid=UbnOn4FystP8Tkg1&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19fNKaRm6X%2F#" 
+                     data-width="500" 
+                     data-show-text="false">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Facebook SDK -->
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v18.0"></script>
+</body>
+</html>

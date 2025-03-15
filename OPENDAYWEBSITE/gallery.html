@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <!-- Add Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="webpage.js"></script>
+    <style>
+        /* Ensure images are responsive */
+        .gallery-img {
+            width: 100%;
+            height: auto;
+            object-fit: cover; /* This will help maintain the aspect ratio without distortion */
+        }
+
+
+        /* Lightbox image setup */
+        #lightbox-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Ensuring the lightbox itself looks good */
+        .lightbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+        }
+
+        .caption {
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            padding: 10px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="bg-light py-3">
+        <div class="container text-center">
+            <img src="img/logo.png" alt="Beauty Logo" class="logo" style="max-width: 100%; height: auto;">
+
+            <h1>Gallery</h1>
+            <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark mx-2" onclick="window.location.href='webpage.html'">Home</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark mx-2" onclick="window.location.href='about.html'">About Us</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark mx-2" onclick="window.location.href='gallery.html'">Gallery</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark mx-2" onclick="window.location.href='contact.html'">Contact</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Section -->
+    <main class="container my-5">
+        <section id="thumbnails">
+            <h2 class="text-center mb-4">Select an Image</h2>
+            <div id="thumbnail-container" class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-4">
+                <!-- Thumbnails will be dynamically generated here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox (Full-Screen Image Preview) -->
+    <div id="lightbox" class="lightbox" style="display: none;">
+        <span id="close-lightbox" class="close">&times;</span>
+        <button id="prev-lightbox" class="nav-button prev">
+            <img src="img/heart-icon.jpg" alt="Previous" class="nav-icon">
+        </button>
+        <img id="lightbox-image" class="lightbox-content" src="" alt="">
+        <div class="caption">
+            <h2 id="lightbox-title"></h2>
+            <p id="lightbox-description"></p>
+        </div>
+        <button id="next-lightbox" class="nav-button next">
+            <img src="img/heart-icon.jpg" alt="Next" class="nav-icon">
+        </button>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; All rights reserved.</p>
+    </footer>
+
+    <!-- Add Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

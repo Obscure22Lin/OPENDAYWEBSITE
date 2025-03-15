@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claritas Jewelry and Makeup</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header class="bg-light py-3">
+        <div class="container text-center">
+            <img src="img/logo.png" alt="Beauty Logo" class="logo" style="max-width: 100%; height: auto;">
+            <h1>Claritas Jewelry and Makeup</h1>
+            <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark mx-2" onclick="window.location.href='webpage.html'">Home</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark mx-2" onclick="window.location.href='about.html'">About Us</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark mx-2" onclick="window.location.href='gallery.html'">Gallery</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-dark mx-2" onclick="window.location.href='contact.html'">Contact</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="text-center py-5">
+        <div class="container">
+            <h2>Welcome to Our Beauty Store</h2>
+            <p>Discover our range of beauty products that enhance your natural beauty.</p>
+        </div>
+    </section>
+
+    <section id="products" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Products</h2>
+            <div class="slider-container d-flex justify-content-center align-items-center">
+                <div class="slider heart-shape">
+                    <div class="product">
+                        <img src="img/black shoe 1.jpg" alt="Black Shoe" class="img-fluid">
+                        <h3>Black Shoe</h3>
+                        <p>Price: $19.99</p>
+                    </div>
+                    <div class="product">
+                        <img src="img/brown shoe 8.jpg" alt="Brown Shoe" class="img-fluid">
+                        <h3>Brown Shoe</h3>
+                        <p>Price: $29.99</p>
+                    </div>
+                    <div class="product">
+                        <img src="img/pink shoe.jpg" alt="Pink Shoe" class="img-fluid">
+                        <h3>Pink Shoe</h3>
+                        <p>Price: $39.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-3 mt-4 bg-dark text-white">
+        <p>&copy; 2025 Claritas Jewelry and Makeup. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            const slider = document.querySelector('.slider');
+            const totalSlides = document.querySelectorAll('.product').length;
+            if (index >= totalSlides) currentIndex = 0;
+            else if (index < 0) currentIndex = totalSlides - 1;
+            else currentIndex = index;
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() { showSlide(currentIndex + 1); }
+        function prevSlide() { showSlide(currentIndex - 1); }
+
+        function autoSlide() {
+            nextSlide();
+            setTimeout(autoSlide, 3000);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            setTimeout(autoSlide, 3000);
+        });
+    </script>
+</body>
+</html>
+
